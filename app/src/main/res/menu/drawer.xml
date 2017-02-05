@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_subheader"
+            android:title="@string/app_name">
+            <menu>
+                <item
+                    android:id="@+id/home"
+                    android:checked="true"
+                    android:icon="@mipmap/ic_launcher"
+                    android:title="@string/current"/>
+                <item
+                    android:id="@+id/place"
+                    android:icon="@drawable/ic_temperature"
+                    android:title="@string/dailyforecast"/>
+            </menu>
+        </item>
+    <item
+        android:id="@+id/navigation_subheader1"
+        android:title="@string/action_settings">
+        <menu>
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/action_settings"/>
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_info"
+                android:title="@string/about"/>
+        </menu>
+    </item>
+        <item
+            android:id="@+id/navigation_subheader2"
+            android:title="@string/developer">
+            <menu>
+                <item
+                    android:id="@+id/dev_linkedin"
+                    android:icon="@drawable/linkedin"
+                    android:title="@string/dev_linkedin"/>
+                <item
+                    android:id="@+id/dev_github"
+                    android:icon="@drawable/github"
+                    android:title="@string/dev_github"/>
+            </menu>
+        </item>
+</group>
+</menu>

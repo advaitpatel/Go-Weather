@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#E8E8E8"
+    tools:context=".DailyForecastActivity">   <!-- AppBarLayout allows your Toolbar and other views (such as tabs provided by TabLayout)
+    to react to scroll events in a sibling view marked with a ScrollingViewBehavior.-->
+    <!--<android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">-->
+
+        <!-- specify tag app:layout_scrollFlags -->
+        <include layout="@layout/toolbar_scrolling"/>
+
+        <!-- specify tag app:layout_scrollFlags -->
+
+        <!--  app:layout_collapseMode="pin" will help to pin this view at top when scroll -->
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Title"
+            android:gravity="center"
+            app:layout_collapseMode="pin" />-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <!-- This will be your scrolling view.
+    app:layout_behavior="@string/appbar_scrolling_view_behavior" tag connects this features -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvUsers"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.design.widget.CoordinatorLayout>

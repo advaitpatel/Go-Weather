@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.advaitpatel.goweather">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyMaterialTheme">
+        <activity
+            android:name="com.advaitpatel.goweather.activity.MainActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/DrawerTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="weather" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.wetter.com"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="wetter.com"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="com.advaitpatel.goweather.activity.AboutActivity"
+            android:configChanges="orientation"
+            android:label="@string/about"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.advaitpatel.goweather.activity.SettingsActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.advaitpatel.goweather.activity.BetaSettingsActivity"
+            android:configChanges="orientation"
+            android:label="@string/beta_settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.advaitpatel.goweather.activity.DesignTest"
+            android:configChanges="orientation"
+            android:label="@string/places"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.advaitpatel.goweather.activity.DailyForecastActivity"
+            android:configChanges="orientation"
+            android:label="@string/dailyforecast"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.advaitpatel.goweather.activity.ForecastActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.advaitpatel.goweather.activity.WeatherService"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Weather Sync Service" />
+
+        <provider
+            android:name="com.advaitpatel.goweather.search.SearchSugestionProvider"
+            android:authorities="com.advaitpatel.goweather.search.SearchSugestionProvider" />
+
+        <activity
+            android:name="com.advaitpatel.goweather.activity.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/MyMaterialTheme"></activity>
+    </application>
+
+</manifest>
